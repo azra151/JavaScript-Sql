@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Asosiatif</title>
+</head>
+
+<body>
+    <div id="hasil">
+        <script>
+            //data awal Object
+            let tinggi = {
+                Rose : 178,
+                Magnolia : 153,
+                Daisy : 165,
+                Jasmine : 161,
+                Violet : 159
+            };
+            //mengambil key nama nama di nama nama yang akan di urutkan berdasarkan alfabet
+            const namaUrut = Object.keys(tinggi).sort();
+                //menampilkan dengan foreach
+                let hasil = "";
+                namaUrut.forEach(function(nama){
+                    hasil = hasil + "" + nama + " : " + tinggi[nama] + "cm" + "";
+                })
+            document.getElementById("hasil").innerHTML = hasil;
+        </script>
+    </div>
+</body>
+</html>
